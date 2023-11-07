@@ -161,3 +161,4 @@ cython_debug/
 #.idea/
 
 __init__.py
+mydb.dat
