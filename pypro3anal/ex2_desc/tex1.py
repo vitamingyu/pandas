@@ -68,7 +68,7 @@ plt.show()
 
 # 정규성 확인 시각화 2: histogram
 sns.displot(fdata.iloc[:, 2], kde=True)
-plt.show
+plt.show()
 
 result3 = stats.ttest_1samp(fdata.weight, 2800)
 print(result3)
