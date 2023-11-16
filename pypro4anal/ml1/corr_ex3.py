@@ -17,7 +17,7 @@ def makeScatterGraph(tour_table, all_table, tourpoint):
     fig = plt.figure()
     fig.suptitle(tourpoint + '상관관계분석')
 
-    plt.subplot(1, 3, 1)  # 1행 3열에 1열
+    plt.subplot(1, 3, 1)  # 1행 3열 중 1열
     plt.xlabel('중국인 입국수')
     plt.ylabel('외국인 입장객수')
     lamb1 = lambda p:merge_table['china'].corr(merge_table['ForNum'])
@@ -26,7 +26,7 @@ def makeScatterGraph(tour_table, all_table, tourpoint):
     plt.title('r={:.5f}'.format(r1))
     plt.scatter(merge_table['china'], merge_table['ForNum'], s=5, c='red')
 
-    plt.subplot(1, 3, 2)  # 1행 3열에 1열
+    plt.subplot(1, 3, 2)  # 1행 3열 중 2열
     plt.xlabel('일본인 입국수')
     plt.ylabel('외국인 입장객수')
     lamb2 = lambda p: merge_table['japan'].corr(merge_table['ForNum'])
@@ -35,7 +35,7 @@ def makeScatterGraph(tour_table, all_table, tourpoint):
     plt.title('r={:.5f}'.format(r2))
     plt.scatter(merge_table['japan'], merge_table['ForNum'], s=5, c='green')
 
-    plt.subplot(1, 3, 3)  # 1행 3열에 1열
+    plt.subplot(1, 3, 3)  # 1행 3열 중 3열
     plt.xlabel('미국인 입국수')
     plt.ylabel('외국인 입장객수')
     lamb3 = lambda p: merge_table['usa'].corr(merge_table['ForNum'])
