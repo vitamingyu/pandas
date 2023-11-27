@@ -92,8 +92,8 @@ model3.compile(optimizer='adam', loss='mse', metrics=['mse'])
 
 # fit()을 실행할 때 하나의 입력행렬 x_train을 전달하는 것이 아니라
 # 입력 마다 하나씩 행렬의 튜플(x_train_a, x_train_b)을 전달행야 한다.
-x_train_a, x_train_b = x_train[:, :5], x_train[:, 2:]
-x_valid_a, x_valid_b = x_valid[:, :5], x_valid[:, 2:]
+x_train_a, x_train_b = x_train[:, :5], x_train[:, 2:]  # 인풋 5개
+x_valid_a, x_valid_b = x_valid[:, :5], x_valid[:, 2:]  # 인풋 6개
 x_test_a, x_test_b = x_test[:, :5], x_test[:,2:] # evaluate용
 x_new_a, x_new_b = x_test_a[:3], x_test_b[:3] # predict용
 
